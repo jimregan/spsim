@@ -100,18 +100,16 @@ def trans(word):
 
 def transline(line):
     new = [trans(word) for word in line]
-    temp = new[0] + "\t" + new[-1]
+    temp = [new[0], new[-1]]
     return temp
 
 
 if __name__ == '__main__':
-    if __name__ == '__main__':
     import sys
     import doctest
     doctest.testmod()
     if len(sys.argv) != 3:
-        print('Usage:', sys.argv[0], 'EXAMPLES_FILE', 'INPUT_FILE',
-              file=sys.stderr)
+
         sys.exit(2)
     exfile, infile = sys.argv[1:]
     sim = SpSim()
